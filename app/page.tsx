@@ -8,6 +8,7 @@ import LocationsSection from '@/components/LocationsSection';
 import LocationsShowcase from '@/components/LocationsShowcase';
 import AboutUs from '@/components/AboutUs';
 import FeaturesBento from '@/components/FeaturesBento';
+import ReviewsSection from '@/components/ReviewsSection';
 import Footer from '@/components/Footer';
 import { motion, useScroll, useTransform, useSpring, useMotionValue } from 'framer-motion';
 
@@ -108,9 +109,9 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="mt-12"
           >
-            <button className="px-10 py-4 bg-[#111] text-white rounded-full text-xs font-bold uppercase tracking-widest hover:bg-[#C9A063] hover:text-white transition-all shadow-xl hover:shadow-2xl">
+            <a href="https://wa.me/917069369000" target="_blank" rel="noopener noreferrer" className="px-10 py-4 bg-[#111] text-white rounded-full text-xs font-bold uppercase tracking-widest hover:bg-[#C9A063] hover:text-white transition-all shadow-xl hover:shadow-2xl inline-block">
               Order Ahead
-            </button>
+            </a>
           </motion.div>
 
         </motion.div>
@@ -130,6 +131,9 @@ export default function Home() {
 
       {/* FEATURES / PHILOSOPHY SECTION */}
       <FeaturesBento />
+
+      {/* REVIEWS SECTION */}
+      <ReviewsSection />
 
       {/* THE TIBCO EXPERIENCE (NEW SHOWCASE COMPONENT) */}
       <section className="bg-white py-12">

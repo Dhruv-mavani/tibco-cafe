@@ -10,14 +10,14 @@ const LOCATIONS = [
         hours: "Open · Closes 11:30 pm",
         phone: "070693 69000",
         embed: "https://maps.google.com/maps?q=Tibco+Daily,+G12,+Eco+Commerz,+Vesu+Canal+Rd,+Surat&t=&z=15&ie=UTF8&iwloc=&output=embed",
-        dirReq: "https://www.google.com/maps/dir//Tibco+Daily,+G12,+Eco+Commerz,+Vesu+Canal+Rd,+opp.+Rajhans+Zion"
+        dirReq: "https://maps.app.goo.gl/kJEQFByvuWfmNThJ6"
     },
     {
         name: "Tibco",
         address: "g2, Anuvrat Dwar Junction, West) BRTS",
         hours: "Open · Closes 11:30 pm",
-        embed: "https://maps.google.com/maps?q=Tibco,+Coffee+shop,+g2,+Anuvrat+Dwar+Junction,+Surat&t=&z=15&ie=UTF8&iwloc=&output=embed",
-        dirReq: "https://www.google.com/maps/dir//Tibco,+g2,+Anuvrat+Dwar+Junction,+West)+BRTS"
+        embed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14884.433765491201!2d72.76853998715822!3d21.148082300000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04d004820df6f%3A0x63026ece05656e66!2stibco!5e0!3m2!1sen!2sin!4v1772789688591!5m2!1sen!2sin",
+        dirReq: "https://maps.app.goo.gl/bLhzZYadFHNUtUKm8"
     },
     {
         name: "TIBCO PLUS",
@@ -25,14 +25,14 @@ const LOCATIONS = [
         hours: "Open · Closes 11:30 pm",
         phone: "070963 69000",
         embed: "https://maps.google.com/maps?q=TIBCO+PLUS,+G1,+SNS+ARISTA,+Surat&t=&z=15&ie=UTF8&iwloc=&output=embed",
-        dirReq: "https://www.google.com/maps/dir//TIBCO+PLUS,+G1,+SNS+ARISTA,+opp.+HAPPY+RESIDENCY,+near+PRIME+SHOPPERS"
+        dirReq: "https://maps.app.goo.gl/wAkQPpaJNPT3tmdq8"
     },
     {
         name: "Tibco Plus @Aspire",
         address: "Besides kia showroom, sangini aspire, 102-103, Rto road",
         hours: "Open · Closes 11:30 pm",
         embed: "https://maps.google.com/maps?q=Tibco+Plus+@Aspire,+sangini+aspire,+Surat&t=&z=15&ie=UTF8&iwloc=&output=embed",
-        dirReq: "https://www.google.com/maps/dir//Tibco+Plus+@Aspire,+Besides+kia+showroom,+sangini+aspire,+102-103,+Rto+road"
+        dirReq: "https://maps.app.goo.gl/ff6992PE985RC2ga7"
     }
 ];
 

@@ -71,7 +71,7 @@ export default function InteractiveMenu() {
                 <div className="text-center mb-16">
                     <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-4 text-[#111]">Our Menu</h2>
                     <p className="text-[#666] max-w-xl mx-auto text-lg">Meticulously sourced, crafted with absolute intent.</p>
-                    <p className="text-[#888] text-xs mt-3 font-bold uppercase tracking-[0.2em]">* Prices may differ strictly based on location</p>
+                    <p className="text-[#888] text-xs mt-3 font-bold uppercase tracking-[0.2em]">* Prices may differ based on location</p>
                 </div>
 
                 {/* Categories Tab Bar */}

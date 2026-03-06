@@ -24,11 +24,16 @@ export default function Navbar() {
         <span className="text-[#111111] font-black tracking-tighter text-2xl mt-1">TIBCO.</span>
       </motion.div>
 
-      <div className="flex gap-8 text-[#111111] text-xs font-bold uppercase tracking-widest hidden md:flex">
-        <a href="#menu" className="hover:text-[#C9A063] transition-colors py-2">Menu</a>
-        <a href="#story" className="hover:text-[#C9A063] transition-colors py-2">Our Story</a>
-        <a href="#about-us" className="hover:text-[#C9A063] transition-colors py-2">Our People</a>
-        <a href="#locations" className="hover:text-[#C9A063] transition-colors py-2">Locations</a>
+      <div className="hidden md:flex items-center gap-8">
+        <div className="flex gap-8 text-[#111111] text-xs font-bold uppercase tracking-widest">
+          <a href="#menu" className="hover:text-[#C9A063] transition-colors py-2">Menu</a>
+          <a href="#story" className="hover:text-[#C9A063] transition-colors py-2">Our Story</a>
+          <a href="#about-us" className="hover:text-[#C9A063] transition-colors py-2">Our People</a>
+          <a href="#locations" className="hover:text-[#C9A063] transition-colors py-2">Locations</a>
+        </div>
+        <a href="https://wa.me/917069369000" target="_blank" rel="noopener noreferrer" className="px-6 py-2.5 bg-[#111] text-white rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-[#C9A063] transition-all duration-300 shadow-md hover:shadow-lg">
+          Order Now
+        </a>
       </div>
 
       {/* Mobile Menu Toggle (Visual only for MVP) */}

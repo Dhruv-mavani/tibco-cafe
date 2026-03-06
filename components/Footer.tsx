@@ -4,8 +4,9 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 export default function Footer() {
-    const [email, setEmail] = useState('');
-    const [isHovered, setIsHovered] = useState(false);
+    const [name, setName] = useState('');
+    const [phone, setPhone] = useState('');
+    const [message, setMessage] = useState('');
 
     return (
         <footer className="bg-[#111111] text-white pt-24 pb-12 relative overflow-hidden">
@@ -32,55 +33,79 @@ export default function Footer() {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                            <motion.button
+                            <motion.a
+                                href="https://wa.me/917069369000"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
                                 className="bg-[#C9A063] text-[#111] px-8 py-4 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-white transition-colors shadow-lg flex items-center justify-center gap-2 w-full sm:w-auto"
                             >
                                 <span>Order Now</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
-                            </motion.button>
+                            </motion.a>
 
-                            <motion.button
+                            <motion.a
+                                href="tel:+917069369000"
                                 whileHover={{ scale: 1.02, backgroundColor: "rgba(255,255,255,0.1)" }}
                                 whileTap={{ scale: 0.98 }}
                                 className="border border-white/20 text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest text-sm transition-colors flex items-center justify-center gap-2 w-full sm:w-auto"
                             >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
-                                <span>Get the App</span>
-                            </motion.button>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+                                <span>Call Us</span>
+                            </motion.a>
                         </div>
                     </div>
 
-                    {/* Right: Newsletter / Club Membership */}
+                    {/* Right: Mail Us Contact Form */}
                     <div className="lg:pl-16 lg:border-l border-white/10 flex flex-col justify-center">
-                        <h3 className="text-3xl font-bold mb-4">Join the Inner Circle</h3>
-                        <p className="text-white/50 mb-8 max-w-md">
-                            Get exclusive offers, early access to new seasonal menus, and a complimentary coffee on your birthday.
+                        <h3 className="text-3xl font-bold mb-2">Mail Us</h3>
+                        <p className="text-white/50 mb-6 max-w-md text-sm">
+                            Have a question, feedback, or a catering inquiry? Drop us a message and we&apos;ll get back to you.
                         </p>
 
-                        <div className="relative group max-w-md w-full">
+                        <form
+                            onSubmit={(e) => {
+                                e.preventDefault();
+                                const subject = encodeURIComponent(`Message from ${name}`);
+                                const body = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\n\nMessage:\n${message}`);
+                                window.open(`mailto:tibco.coffee@gmail.com?subject=${subject}&body=${body}`, '_self');
+                            }}
+                            className="flex flex-col gap-3 max-w-md w-full"
+                        >
                             <input
-                                type="email"
-                                placeholder="Enter your email"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                className="w-full bg-white/5 border border-white/10 rounded-full py-4 pl-6 pr-16 text-white placeholder:text-white/30 focus:outline-none focus:border-[#C9A063] focus:bg-white/10 transition-all font-light"
+                                type="text"
+                                placeholder="Your Name"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                                required
+                                className="w-full bg-white/5 border border-white/10 rounded-xl py-3 px-5 text-white placeholder:text-white/30 focus:outline-none focus:border-[#C9A063] focus:bg-white/10 transition-all text-sm"
+                            />
+                            <input
+                                type="tel"
+                                placeholder="Phone Number"
+                                value={phone}
+                                onChange={(e) => setPhone(e.target.value)}
+                                className="w-full bg-white/5 border border-white/10 rounded-xl py-3 px-5 text-white placeholder:text-white/30 focus:outline-none focus:border-[#C9A063] focus:bg-white/10 transition-all text-sm"
+                            />
+                            <textarea
+                                placeholder="Your Message"
+                                value={message}
+                                onChange={(e) => setMessage(e.target.value)}
+                                required
+                                rows={3}
+                                className="w-full bg-white/5 border border-white/10 rounded-xl py-3 px-5 text-white placeholder:text-white/30 focus:outline-none focus:border-[#C9A063] focus:bg-white/10 transition-all text-sm resize-none"
                             />
                             <motion.button
-                                onHoverStart={() => setIsHovered(true)}
-                                onHoverEnd={() => setIsHovered(false)}
-                                whileTap={{ scale: 0.9 }}
-                                className="absolute right-2 top-2 bottom-2 w-12 bg-[#111] rounded-full flex items-center justify-center border border-white/20 hover:border-[#C9A063] hover:bg-[#C9A063] text-white hover:text-[#111] transition-all"
+                                type="submit"
+                                whileHover={{ scale: 1.02 }}
+                                whileTap={{ scale: 0.98 }}
+                                className="w-full bg-white/10 border border-white/10 text-white py-3 rounded-xl font-bold uppercase tracking-widest text-xs hover:bg-[#C9A063] hover:text-[#111] hover:border-[#C9A063] transition-all flex items-center justify-center gap-2"
                             >
-                                <motion.svg
-                                    animate={{ x: isHovered ? 3 : 0 }}
-                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-                                >
-                                    <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
-                                </motion.svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m22 2-7 20-4-9-9-4Z" /><path d="M22 2 11 13" /></svg>
+                                <span>Send Message</span>
                             </motion.button>
-                        </div>
+                        </form>
                     </div>
                 </div>
 
@@ -97,7 +122,7 @@ export default function Footer() {
                     >
                         {[...Array(2)].map((_, j) => (
                             <div key={j} className="flex gap-8 items-center">
-                                {["FAST OR FREE", "SIGNATURE QUALITY", "BAKED DAILY", "EARN REWARDS", "DRIVE-THRU READY"].map((text, i) => (
+                                {["TASTE THE TIBCO DIFFERENCE", "SIGNATURE QUALITY", "FRESHLY PREPARED", "HAND CRAFTED", "FUEL-UP FAST"].map((text, i) => (
                                     <div key={`${j}-${i}`} className="flex items-center gap-8">
                                         <span className="text-sm font-bold tracking-[0.2em]">{text}</span>
                                         <span className="text-xs">✦</span>
@@ -119,16 +144,16 @@ export default function Footer() {
 
                     <div className="flex flex-col gap-3">
                         <span className="text-xs font-bold tracking-widest text-[#C9A063] mb-2">MENU</span>
-                        <a href="#" className="text-sm text-white/60 hover:text-white transition-colors">Coffee</a>
-                        <a href="#" className="text-sm text-white/60 hover:text-white transition-colors">Signature Bagels</a>
-                        <a href="#" className="text-sm text-white/60 hover:text-white transition-colors">Pastries</a>
-                        <a href="#" className="text-sm text-white/60 hover:text-white transition-colors">Catering</a>
+                        <a href="#menu" className="text-sm text-white/60 hover:text-white transition-colors">Coffee</a>
+                        <a href="#menu" className="text-sm text-white/60 hover:text-white transition-colors">Signature Bagels</a>
+                        <a href="#menu" className="text-sm text-white/60 hover:text-white transition-colors">Pastries</a>
+                        <a href="#menu" className="text-sm text-white/60 hover:text-white transition-colors">Catering</a>
                     </div>
 
                     <div className="flex flex-col gap-3">
                         <span className="text-xs font-bold tracking-widest text-[#C9A063] mb-2">COMPANY</span>
                         <a href="#" className="text-sm text-white/60 hover:text-white transition-colors">Our Story</a>
-                        <a href="#" className="text-sm text-white/60 hover:text-white transition-colors">Locations</a>
+                        <a href="#locations" className="text-sm text-white/60 hover:text-white transition-colors">Locations</a>
                         <a href="#" className="text-sm text-white/60 hover:text-white transition-colors">Careers &nbsp;<span className="text-[#C9A063] text-[10px] uppercase font-bold bg-[#C9A063]/10 px-2 py-0.5 rounded-full">Hiring</span></a>
                         <a href="#" className="text-sm text-white/60 hover:text-white transition-colors">Franchise</a>
                     </div>
@@ -149,7 +174,7 @@ export default function Footer() {
 
                 {/* Very Bottom */}
                 <div className="flex flex-col md:flex-row justify-between items-center text-[10px] text-white/30 uppercase tracking-widest pt-8 border-t border-white/10">
-                    <p>&copy; {new Date().getFullYear()} TIBCO QSR. All Rights Reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} TIBCO. All Rights Reserved.</p>
                     <div className="flex gap-6 mt-4 md:mt-0">
                         <a href="#" className="hover:text-white transition-colors">Privacy</a>
                         <a href="#" className="hover:text-white transition-colors">Terms</a>
