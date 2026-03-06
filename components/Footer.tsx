@@ -139,7 +139,7 @@ export default function Footer() {
                         <h4 className="text-2xl font-black tracking-tighter mb-1 relative inline-block group cursor-pointer">
                             TIBCO.
                         </h4>
-                        <p className="text-white/40 text-xs mt-2">The standard for Quick Service.</p>
+                        <p className="text-white/60 text-xs mt-2">The standard for Quick Service.</p>
                     </div>
 
                     <div className="flex flex-col gap-3">
@@ -178,7 +178,7 @@ export default function Footer() {
                     <div className="flex gap-6 mt-4 md:mt-0">
                         <a href="#" className="hover:text-white transition-colors">Privacy</a>
                         <a href="#" className="hover:text-white transition-colors">Terms</a>
-                        <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-[#C9A063] transition-colors flex items-center gap-1 group">
+                        <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-[#C9A063] transition-colors flex items-center gap-1 group" aria-label="Scroll to top">
                             Back To Top
                             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:-translate-y-1 transition-transform"><path d="m18 15-6-6-6 6" /></svg>
                         </button>

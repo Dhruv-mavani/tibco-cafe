@@ -28,7 +28,7 @@ export default function GalleryCarousel() {
 
             <div className="text-center mb-16 px-6">
                 <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-[#111] mb-4">Cafe Moments</h2>
-                <p className="text-[#666] font-medium tracking-wide">A glimpse into our daily craft.</p>
+                <p className="text-[#444] font-medium tracking-wide">A glimpse into our daily craft.</p>
             </div>
 
             <div className="relative w-full flex items-center overflow-hidden h-[300px] md:h-[400px]">

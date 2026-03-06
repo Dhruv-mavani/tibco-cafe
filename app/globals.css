@@ -31,12 +31,14 @@ body {
   overflow-x: hidden;
 }
 
-/* Custom utility class for smooth grain overlay */
-.grain-overlay {
-  background-image: url('https://grainy-gradients.vercel.app/noise.svg');
-  opacity: 0.04;
-  pointer-events: none;
-  position: absolute;
-  inset: 0;
-  z-index: 10;
+/* Custom utility class for smooth grain overlay - Desktop only for performance */
+@media (min-width: 768px) {
+  .grain-overlay {
+    background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+    opacity: 0.04;
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+  }
 }

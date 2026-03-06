@@ -70,7 +70,7 @@ export default function InteractiveMenu() {
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-4 text-[#111]">Our Menu</h2>
-                    <p className="text-[#666] max-w-xl mx-auto text-lg">Meticulously sourced, crafted with absolute intent.</p>
+                    <p className="text-[#444] max-w-xl mx-auto text-lg">Meticulously sourced, crafted with absolute intent.</p>
                     <p className="text-[#888] text-xs mt-3 font-bold uppercase tracking-[0.2em]">* Prices may differ based on location</p>
                 </div>
 
@@ -109,7 +109,7 @@ export default function InteractiveMenu() {
                                 <div key={idx} className="group relative border-b border-black/[0.03] pb-6 flex flex-col justify-between hover:border-black/20 transition-colors">
                                     <div>
                                         <div className="flex justify-between items-baseline mb-2">
-                                            <h4 className="text-xl font-bold text-[#111] leading-tight pr-4">{item.name}</h4>
+                                            <h3 className="text-xl font-bold text-[#111] leading-tight pr-4">{item.name}</h3>
                                             <span className="text-[#C9A063] font-bold text-lg whitespace-nowrap">₹ {item.price}</span>
                                         </div>
                                         {item.desc && (

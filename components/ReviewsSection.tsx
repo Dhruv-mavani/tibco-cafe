@@ -150,6 +150,7 @@ export default function ReviewsSection() {
                                 whileTap={{ scale: 0.95 }}
                                 onClick={prevPage}
                                 className="w-12 h-12 rounded-full border border-black/10 flex items-center justify-center hover:bg-[#111] hover:text-white hover:border-transparent transition-all duration-300"
+                                aria-label="Previous reviews"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6" /></svg>
                             </motion.button>
@@ -158,6 +159,7 @@ export default function ReviewsSection() {
                                 whileTap={{ scale: 0.95 }}
                                 onClick={nextPage}
                                 className="w-12 h-12 rounded-full border border-black/10 flex items-center justify-center hover:bg-[#111] hover:text-white hover:border-transparent transition-all duration-300"
+                                aria-label="Next reviews"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6" /></svg>
                             </motion.button>
@@ -223,12 +225,13 @@ export default function ReviewsSection() {
                 </div>
 
                 {/* Page Dots with Progress */}
-                <div className="flex justify-center gap-2 mt-12">
+                <div className="flex justify-center gap-3 mt-12">
                     {Array.from({ length: totalPages }).map((_, i) => (
                         <button
                             key={i}
                             onClick={() => setActiveIndex(i)}
-                            className={`h-2 rounded-full transition-all duration-300 relative overflow-hidden ${i === activeIndex ? 'w-10 bg-black/10' : 'w-2 bg-black/10 hover:bg-black/20'}`}
+                            aria-label={`Go to reviews page ${i + 1}`}
+                            className={`h-3 rounded-full transition-all duration-300 relative overflow-hidden ${i === activeIndex ? 'w-10 bg-black/10' : 'w-3 bg-black/10 hover:bg-black/20'}`}
                         >
                             {i === activeIndex && !isPaused && (
                                 <motion.div

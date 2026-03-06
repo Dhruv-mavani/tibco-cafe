@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import { m, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 
 export default function Navbar() {
   const { scrollY } = useScroll();
@@ -23,14 +23,14 @@ export default function Navbar() {
 
   return (
     <>
-      <motion.nav
+      <m.nav
         style={{ backgroundColor }}
         className="fixed top-0 w-full z-[100] px-6 lg:px-20 py-6 flex justify-between items-center backdrop-blur-md border-b border-black/[0.05]"
       >
-        <motion.div className="flex items-center gap-3">
+        <m.div className="flex items-center gap-3">
           <Image src="/images/tibcoLogo_nobg.png" alt="Tibco Logo" width={48} height={48} className="h-12 w-auto object-contain" priority />
           <span className="text-[#111111] font-black tracking-tighter text-2xl mt-1">TIBCO.</span>
-        </motion.div>
+        </m.div>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
@@ -50,21 +50,21 @@ export default function Navbar() {
           className="md:hidden flex flex-col gap-1.5 cursor-pointer p-2 relative w-10 h-10 items-center justify-center"
           aria-label="Toggle menu"
         >
-          <motion.div
+          <m.div
             animate={{ rotate: isMenuOpen ? 45 : 0, y: isMenuOpen ? 4 : 0 }}
             className="w-6 h-0.5 bg-[#111] origin-center"
           />
-          <motion.div
+          <m.div
             animate={{ rotate: isMenuOpen ? -45 : 0, y: isMenuOpen ? -4 : 0 }}
             className="w-6 h-0.5 bg-[#111] origin-center"
           />
         </button>
-      </motion.nav>
+      </m.nav>
 
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isMenuOpen && (
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -73,7 +73,7 @@ export default function Navbar() {
           >
             <div className="flex flex-col px-8 py-6 gap-1">
               {navLinks.map((link, i) => (
-                <motion.a
+                <m.a
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
@@ -83,9 +83,9 @@ export default function Navbar() {
                   className="text-[#111] text-sm font-bold uppercase tracking-widest py-3 border-b border-black/5 hover:text-[#C9A063] transition-colors"
                 >
                   {link.label}
-                </motion.a>
+                </m.a>
               ))}
-              <motion.a
+              <m.a
                 href="https://wa.me/917069369000"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -96,9 +96,9 @@ export default function Navbar() {
                 className="mt-4 px-6 py-3 bg-[#111] text-white rounded-full text-xs font-bold uppercase tracking-widest hover:bg-[#C9A063] transition-all text-center shadow-md"
               >
                 Order Now
-              </motion.a>
+              </m.a>
             </div>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </>

@@ -33,7 +33,7 @@ export default function StaffCard({ name, role, description, imageUrl, realImage
             </div>
             <h3 className="text-2xl font-bold text-[#111] mb-1">{name}</h3>
             <p className="text-sm font-bold tracking-widest uppercase text-[#C9A063] mb-4">{role}</p>
-            <p className="text-[#666] text-sm leading-relaxed max-w-[200px]">
+            <p className="text-[#444] text-sm leading-relaxed max-w-[200px]">
                 {description}
             </p>
         </div>

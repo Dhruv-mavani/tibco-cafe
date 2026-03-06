@@ -38,7 +38,7 @@ export default function FeaturesBento() {
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
                                 </div>
                                 <h3 className="text-3xl font-bold mb-4 text-[#111]">Fast & Fresh</h3>
-                                <p className="text-[#555] text-lg leading-relaxed">
+                                <p className="text-[#444] text-lg leading-relaxed">
                                     We believe quick service shouldn&apos;t mean compromising on quality. Every meal and beverage is prepared rapidly with premium ingredients to fuel your day instantly.
                                 </p>
                             </div>
@@ -95,7 +95,7 @@ export default function FeaturesBento() {
 
                         <div className="relative z-10 mt-auto">
                             <h3 className="text-2xl font-bold mb-2 text-[#111]">Freshly Prepared</h3>
-                            <p className="text-[#555] leading-relaxed text-sm">
+                            <p className="text-[#444] leading-relaxed text-sm">
                                 Our signature bagels and pastries are baked fresh every single morning, ensuring the perfect texture and taste.
                             </p>
                         </div>
@@ -118,7 +118,7 @@ export default function FeaturesBento() {
                             </div>
                             <div>
                                 <h3 className="text-xl sm:text-2xl font-bold mb-2 text-[#111]">Seamless Experience</h3>
-                                <p className="text-[#555] max-w-md text-sm leading-relaxed">
+                                <p className="text-[#444] max-w-md text-sm leading-relaxed">
                                     From rapid ordering to instant pickup, every touchpoint is designed for ultimate convenience.
                                 </p>
                             </div>

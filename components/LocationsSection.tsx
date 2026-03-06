@@ -42,7 +42,7 @@ export default function LocationsSection() {
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-4 text-[#111]">Find Us</h2>
-                    <p className="text-[#666] max-w-xl mx-auto text-lg">Four unique spaces designed for clarity and connection.</p>
+                    <p className="text-[#444] max-w-xl mx-auto text-lg">Four unique spaces designed for clarity and connection.</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
@@ -74,7 +74,7 @@ export default function LocationsSection() {
                             <div className="p-8 flex flex-col flex-grow justify-between bg-white">
                                 <div>
                                     <h3 className="text-2xl font-black text-[#111] tracking-tight mb-2">{loc.name}</h3>
-                                    <p className="text-[#555] mb-2 leading-relaxed">{loc.address}</p>
+                                    <p className="text-[#444] mb-2 leading-relaxed">{loc.address}</p>
                                     <div className="flex flex-col gap-1 mb-6 text-sm text-[#777] font-medium">
                                         <span className="flex items-center gap-2">
                                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
